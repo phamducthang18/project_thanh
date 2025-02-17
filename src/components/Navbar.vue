@@ -23,26 +23,46 @@
                     <img :src="hoverStates.hover2 ? arrowUp : arrowDown" alt="">
                     <transition name="fade-slide">
                         <div class="dropdown" v-show="hoverStates.hover2">
-                            <div><a href="#">Cloud Solutions</a></div>
-                            <div><a href="#">Networking</a></div>
+                            <div><a href="#">Computer accessory</a></div>
+                            <div><a href="#">IT infrastructure</a></div>
+                            <div><a href="#">Cloud</a></div>
+                            <div><a href="#">IT consulting</a></div>
                         </div>
                     </transition>
                 </div>
-                <div class="content">
+                <div class="content"
+                     @mouseenter="onHover(true, 'hover3')" 
+                     @mouseleave="onHover(false, 'hover3')">
                     <p>Education Service</p>
-                    <img :src="arrowDown" alt="">
+                    <img :src="hoverStates.hover3 ? arrowUp : arrowDown" alt="">
+                    <transition name="fade-slide">
+                        <div class="dropdown" v-show="hoverStates.hover3">
+                            <div><a href="#">Germany</a></div>
+                            <div><a href="#">Canada</a></div>
+                            <div><a href="#">America</a></div>
+                            <div><a href="#">Australia</a></div>
+                        </div>
+                    </transition>
                 </div>
-                <div class="content">
+                <div class="content"
+                     @mouseenter="onHover(true, 'hover4')" 
+                     @mouseleave="onHover(false, 'hover4')">
                     <p>Support</p>
-                    <img :src="arrowDown" alt="">
+                    <img :src="hoverStates.hover4 ? arrowUp : arrowDown" alt="">
+                    <transition name="fade-slide">
+                        <div class="dropdown" v-show="hoverStates.hover4">
+                            <div><a href="#">Contact support</a></div>
+                            <div><a href="#">Community</a></div>
+                        </div>
+                    </transition>
                 </div>
-                <div class="content">
+                <div class="content"
+                     @mouseenter="onHover(true, 'hover5')" 
+                     @mouseleave="onHover(false, 'hover5')">
                     <p>E-commerce</p>
-                    <img :src="arrowDown" alt="">
+                    <img :src="hoverStates.hover5 ? arrowUp : arrowDown" alt="">
                 </div>
             </div>    
-        </div>
-        <div class="content-header">
             <div class="content">
                 <img class="icon" src="../assets/image/headset.svg" alt="">
                 <span>Contact Us</span>
@@ -52,7 +72,7 @@
                 <span>VN/EN</span>
                 <img :src="arrowDown" alt="">
             </div>
-        </div>
+        </div> 
     </div>
 </template>
 
@@ -61,7 +81,7 @@ import { reactive } from 'vue';
 import arrowUp from '../assets/image/arrow-up.svg';
 import arrowDown from '../assets/image/arrow-down.svg';
 
-const hoverStates = reactive({ hover1: false, hover2: false });
+const hoverStates = reactive({ hover1: false, hover2: false, hover3: false, hover4: false, hover5: false });
 
 const onHover = (state, key) => {
     hoverStates[key] = state;
@@ -69,15 +89,21 @@ const onHover = (state, key) => {
 </script>
 
 <style scoped>
-.icon{
+.icon {
     width: 20px;
 }
 .container {
+    position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 35px;
-    border-bottom: 1px solid #ccc; 
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    /* padding: 10px 35px; */
+    background: white;
+    /* border-bottom: 1px solid #ccc; */
+    z-index: 1000;
+    /* background-color: rgba(233, 69, 96, 0.8); */
 }
 
 .logo {
@@ -101,6 +127,7 @@ const onHover = (state, key) => {
 
 .content-header {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
 }
@@ -117,6 +144,7 @@ const onHover = (state, key) => {
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
 }
 
 .content:hover {
@@ -144,7 +172,6 @@ const onHover = (state, key) => {
     color: #007bff;
 }
 
-/* Hiệu ứng trượt xuống */
 .fade-slide-enter-active,
 .fade-slide-leave-active {
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -155,4 +182,5 @@ const onHover = (state, key) => {
     opacity: 0;
     transform: translateY(10px);
 }
+
 </style>
