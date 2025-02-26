@@ -90,13 +90,14 @@
   }
   
   .partner-slider {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
   .partner-logo {
-    width: 120px;
+    width: 200px;
     height: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }

@@ -15,7 +15,7 @@
 
             <p><strong>Director</strong><br>
             Long Wall Technology Corporation<br>
-            CEO – <em>[Your Name]</em></p>
+            </p>
         </div>
 
         <div class="people-first">
@@ -57,10 +57,10 @@
     text-align: center;
 }
 
-/* Phần CEO Message và People First */
+
 .ceo-message, .people-first {
     width: 100%;
-    max-width: 700px;
+    max-width: 850px;
     margin-bottom: 40px;
     padding: 20px;
     /* background: #f9f9f9; */
@@ -68,7 +68,10 @@
     /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
-/* Tiêu đề có hiệu ứng đường kẻ */
+.ceo-message strong{
+    margin-left: 5px;
+    margin-right: 5px;
+}
 h2 {
     font-size: 24px;
     font-weight: bold;

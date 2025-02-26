@@ -30,8 +30,7 @@
       <h2>Vision Statement for Long Walll</h2>
     </div>
     <div class="main-inner">
-    <h4>At Long Wall, we are committed to delivering cutting-edge technology solutions that empower businesses and individuals to optimize operations, enhance experiences, and drive sustainable growth across multiple industries.</h4>
-    
+    <h4 class="title-main-content">At Long Wall, we are committed to delivering cutting-edge technology solutions that empower businesses and individuals to optimize operations, enhance experiences, and drive sustainable growth across multiple industries.</h4>
     <ul>
         <li><strong>IT Services:</strong>
             <ul>
@@ -58,7 +57,7 @@
             </ul>
         </li>
     </ul>
-    <p><strong>💡 With innovation at our core, we strive to be a trusted technology partner, helping businesses and individuals succeed in the digital era.</strong></p>
+    <p><strong class="title-main-content">💡 With innovation at our core, we strive to be a trusted technology partner, helping businesses and individuals succeed in the digital era.</strong></p>
   </div>
 
   </div>
@@ -194,9 +193,9 @@ span {
 
 .inner-item {
   display: flex;
-  flex-direction: column; /* Xếp ảnh trên, text dưới */
+  flex-direction: column; 
   align-items: center;
-  justify-content: space-between; /* Cách đều giữa ảnh và nội dung */
+  justify-content: space-between; 
   padding: 15px;
   background: white;
   border-radius: 15px;
@@ -210,6 +209,13 @@ span {
 .inner-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.title-main-content {
+  max-width: 930px; 
+  text-align: left;
+  
+  margin: 30px auto !important;
+  line-height: 1.5; 
 }
 
 .img_inner {
@@ -265,6 +271,9 @@ a {
 }
 .main-inner h4{
   margin: 30px;
+}
+.main-inner div{
+  margin: 30px 100px;
 }
 .main-inner ul {
     list-style: none; 
